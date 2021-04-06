@@ -12,3 +12,5 @@ Pienso que, si bien no es muy elegante, cumple el objetivo.
 para ejecutarlo, solo aplicar ./donde.sh dominio.com
 
 Actualmente funciona para dominios .com .net. org. cl. pe. info y quizá algunos otros.
+
+Si el dominio no existe, entregará un mensaje: "el dominio no existe"
