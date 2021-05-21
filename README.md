@@ -1,8 +1,6 @@
-Donde - script bash para obtener registros DNS e información de whois de un dominio.
-
-Script para obtener datos de un dominio
-
+Donde - Script bash para obtener registros DNS e información de whois de un dominio.
 Version: 1.0
+Autor: Docnus
 
 Este script existe por que me canse de estar haciendo whois y dig a cada rato para obtener datos de un dominio para mi trabajo. 
 
@@ -25,13 +23,11 @@ Basados en Arch:
 pacman -Sy dnsutils whois
 
 Idealmente, dejalo en tu /usr/local/sbin/ y renombralo a "donde" solamente. 
-
 Antes de ejecutarlo, aplica chmod +x donde para poder ejecutarlo.
 
 Uso: "donde -x dominio.tld" | Donde -x corresponde a alguna opción
---------------------------------------------------------------------------
 RECUERDA:No puedes ocupar dos opciones a la vez!
---------------------------------------------------------------------------
+
 Puedes ocupar algunos de estas opciones:
 -g Ocupará los DNS de Google
 -o Ocupará los DNS de OpenDNS
