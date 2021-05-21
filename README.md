@@ -29,9 +29,9 @@ _Basados en Arch:_
 
 ## Instrucciones
 
-Idealmente, dejalo en tu /usr/local/sbin/ y renombralo a "donde" solamente. 
+Idealmente, dejalo en tu `/usr/local/sbin/` y renombralo a "donde" solamente. 
 
-Antes de ejecutarlo, aplica chmod +x donde para poder ejecutarlo.
+Recuerda aplicar `chmod +x donde` antes, para poder ejecutarlo.
 
 **Uso: "donde -x dominio.tld" | Donde -x corresponde a alguna opción**
 
@@ -47,7 +47,7 @@ Opción | Que hace
 -c | Ocupará los DNS de Cloudflare
 -h | Ocupará los DNS de HN - Util para revisar dominios que esten el datacenter
 -l | Ocupará tu DNS local
--a | Muestra esta ayuda
+-a | Muestra la ayuda
 
 ## Información adicional
 
