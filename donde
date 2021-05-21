@@ -8,7 +8,7 @@
 # -g ocupará los DNS de Google
 # -o ocupará los DNS de OpenDNS
 # -c ocupará los DNS de Cloudflare
-# -hn ocupará los DNS de HN
+# -h ocupará los DNS de HN
 # -l ocupará tu DNS local
 # -h Esta ayuda
 
@@ -262,7 +262,7 @@ echo -e "${BOLDGREEN}#Puedes ocupar algunos de estas opciones:${ENDCOLOR}"
 echo -e "# -g Ocupará los DNS de Google"
 echo -e "# -o Ocupará los DNS de OpenDNS"
 echo -e "# -c Ocupará los DNS de Cloudflare"
-echo -e "# -hn Ocupará los DNS de HN - Util para revisar dominios que esten el datacenter"
+echo -e "# -h Ocupará los DNS de HN - Util para revisar dominios que esten el datacenter"
 echo -e "# -l Ocupará tu DNS local"
 echo -e "# -a Muestra esta ayuda"
 exit
