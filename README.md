@@ -1,4 +1,4 @@
-# Donde - script para obtener registros DNS e información de whois de un dominio.
+# Donde - script bash para obtener registros DNS e información de whois de un dominio.
 
 ## Script para obtener datos de un dominio
 
