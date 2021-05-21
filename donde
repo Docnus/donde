@@ -55,19 +55,19 @@ fi
 #Comparamos la variable "quien" con las siguientes condiciones:
 
 if [[ "$quien" == *"No match"* ]]; then
-	echo -e "el dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
+	echo -e "El dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
 exit
 elif [[ "$quien" == *"no entries found"* ]]; then
-	echo -e "el dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
+	echo -e "El dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
 exit
 elif [[ "$quien" == *"No Object Found"* ]]; then
-	echo -e "el dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
+	echo -e "El dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
 exit
 elif [[ "$quien" == *"NOT FOUND"* ]]; then
-	echo -e "el dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
+	echo -e "El dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
 exit
 elif [[ "$quien" == *"No whois server is known"* ]]; then
-	echo -e "el dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
+	echo -e "El dominio ${BOLDRED}"$dominio"${ENDCOLOR} no existe"
 exit
 
 
