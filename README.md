@@ -45,7 +45,6 @@ Opción | Que hace
 -g | Ocupará los DNS de Google
 -o | Ocupará los DNS de OpenDNS
 -c | Ocupará los DNS de Cloudflare
--h | Ocupará los DNS de HN - Util para revisar dominios que esten el datacenter
 -l | Ocupará tu DNS local
 -a | Muestra la ayuda
 
