@@ -1,7 +1,7 @@
 #!/bin/bash
 #donde - Script para obtener informacion del dominio - Whois - Registros de zona DNS escenciales - Reverso
 #Autor: Docnus
-#Version: 1.0
+#Version: 1.1
 #
 #Uso: donde -x dominio.tld - Donde -x corresponde a alguna opción
 #Puedes ocupar algunos de estos switch:
@@ -83,6 +83,9 @@ local ns=$(dig $DNS +nocmd +noall +answer +ttlid $dominio ns)
 #Consultamos Registros A
 local a=$(dig $DNS +nocmd +noall +answer +ttlid $dominio a)
 
+#Consultamos Registros WWW (por si tiene la web en otro lugar)
+local www=$(dig $DNS +nocmd +noall +answer +ttlid www.$dominio)
+
 #Consultamos Registro mail.dominio.tld
 local mail=$(dig $DNS +nocmd +noall +answer +ttlid +additional mail.$dominio)
 
@@ -118,16 +121,26 @@ fi
 #A
 echo -e "${BOLDGREEN}#Registros A del dominio "$dominio"${ENDCOLOR}"
 if [[ -z $a ]]; then
-	a="No tiene registros NS."
+	a="No tiene registros A."
 	echo -e "${BOLDRED}$a${ENDCOLOR}"
 else
 	echo "$a"
 fi
 
+#WWW
+echo -e "${BOLDGREEN}#Registros WWW del dominio "$dominio"${ENDCOLOR}"
+if [[ -z $www ]]; then
+        www="No tiene registros WWW."
+        echo -e "${BOLDRED}$www${ENDCOLOR}"
+else
+        echo "$www"
+fi
+
+
 #A mail
 echo -e "${BOLDGREEN}#Registro mail."$dominio"${ENDCOLOR}"
 if [[ -z $mail ]]; then
-	mail="No tiene registros NS."
+	mail="No tiene registros MAIL."
 	echo -e "${BOLDRED}$mail${ENDCOLOR}"
 else
 	echo "$mail"
@@ -136,7 +149,7 @@ fi
 #MX
 echo -e "${BOLDGREEN}#Registros MX${ENDCOLOR}"
 if [[ -z $mx ]]; then
-	mx="No tiene registros NS."
+	mx="No tiene registros MX."
 	echo -e "${BOLDRED}$mx${ENDCOLOR}"
 else
 	echo "$mx"
@@ -145,7 +158,7 @@ fi
 #TXT
 echo -e "${BOLDGREEN}#Registros TXT${ENDCOLOR}"
 if [[ -z $txt ]]; then
-	txt="No tiene registros NS."
+	txt="No tiene registros TXT."
 	echo -e "${BOLDRED}$txt${ENDCOLOR}"
 else
 	echo "$txt"
@@ -154,7 +167,7 @@ fi
 #DMARC
 echo -e "${BOLDGREEN}#DMARC, si es que lo tiene${ENDCOLOR}"
 if [[ -z $dmarc ]]; then
-	dmarc="No tiene registros NS."
+	dmarc="No tiene registros DMARC."
 	echo -e "${BOLDRED}$dmarc${ENDCOLOR}"
 else
 	echo "$dmarc"
